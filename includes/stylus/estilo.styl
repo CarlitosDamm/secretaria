@@ -8,6 +8,7 @@ body
 	font-size 16px
 
 .container
+	
 	width 100%
 .row
 	display flex
@@ -16,7 +17,7 @@ body
 .banner
 	display none
 .boton
-	background green
+	background #FF9E0B
 	border none
 	border-radius 5px
 	color white
@@ -26,9 +27,18 @@ body
 	padding 2px
 	width 20%
 .buscar
+	border 1px solid #003A66
+	border-radius 5px
 	display block
-	height 85%
-	width auto
+	font-size 14px
+	height 80%
+	padding 3px
+	width 75%
+	&:focus
+		border 1px solid #FF9E0B
+		background #E8E8E8
+		
+
 .full
 	display block
 	width 90%
@@ -70,8 +80,15 @@ body
 		display block
 		article 
 			float left
+			margin-top 10px
 			position relative
 			width 100%
+			h1
+				display flex
+				height auto
+				justify-content center
+				margin 20px 0px
+				width 100%
 	header
 		nav
 			background black
