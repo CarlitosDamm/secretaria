@@ -5,7 +5,11 @@
 <div class="row">
 	<div class="full centrado">
 		<input type="text" class="buscar" id="Fecha" placeholder="Buscar Fecha">
-		<input type="submit" class="boton" value="Buscar" >
+		<input type="submit" class="boton" id="boton" value="Buscar" >
+	</div>
+</div>
+<div class="row">
+	<div class="fechaPHP" id='fechaPHP'>	
 	</div>
 </div>
 <div class="row">

@@ -20,6 +20,9 @@ function main(){
 };
 
 
+$('#boton').click(function(){
+ $('#fechaPHP').html('Fecha buscada: ' + $('#Fecha').val());
+});
 
 $('#Fecha').datepicker({dateFormat: "yy-mm-dd"});
 $('#FechaD').datepicker({dateFormat: "yy-mm-dd"});
