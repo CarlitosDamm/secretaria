@@ -60,5 +60,10 @@ class Inicio extends CI_Controller {
 		}
 	}
 
+	public function preubas($a){
+		$datos['contador'] = $a;
+		$this->load->view('usuarios/preubas', $datos);
+	}
+
 	
 }

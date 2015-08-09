@@ -1,0 +1,1 @@
+<h1>Hola Chomo : <?=$contador?></h1>

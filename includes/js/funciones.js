@@ -20,8 +20,13 @@ function main(){
 };
 
 
-$('#boton').click(function(){
- $('#fechaPHP').html('Fecha buscada: ' + $('#Fecha').val());
+$('#boton').hover(function(){
+      var b=0;
+      var a=0;
+      setInterval(function() {
+        $('#fechaPHP').load('index.php/Inicio/preubas/'+b);
+         b= (a++)/60;
+    }, 1000); 
 });
 
 $('#Fecha').datepicker({dateFormat: "yy-mm-dd"});
