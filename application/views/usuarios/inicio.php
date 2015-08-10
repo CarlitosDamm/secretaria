@@ -15,7 +15,7 @@
 <div class="row">
 	<div class="full">
 		<section>
-			<article class="tabla">
+			<article class="tabla" id="agendaDia">
 				<h1>Agenda del Día</h1>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque ipsum eaque voluptate, illo, quasi tempora assumenda deleniti sapiente animi iure cumque velit ut voluptatem, nostrum explicabo sint saepe pariatur. Iure.</p>
 			</article>

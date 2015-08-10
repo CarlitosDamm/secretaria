@@ -60,8 +60,9 @@ class Inicio extends CI_Controller {
 		}
 	}
 
-	public function preubas($a){
-		$datos['contador'] = $a;
+	public function buscar($b){
+		$datos['eventos'] = $this->Inicio_model->eventos($b);
+		$datos['contador'] = $b;
 		$this->load->view('usuarios/preubas', $datos);
 	}
 

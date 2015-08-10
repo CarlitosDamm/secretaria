@@ -42,6 +42,18 @@ body {
   border: 1px solid #ff9e0b;
   background: #e8e8e8;
 }
+.evento {
+  background: #f00;
+  border: 1px solid #f00;
+  color: #fff;
+  display: flex;
+  border-radius: 50%;
+  font-size: 20px;
+  float: left;
+  height: 20px;
+  justify-content: space-around;
+  width: 20px;
+}
 .full {
   display: block;
   width: 90%;

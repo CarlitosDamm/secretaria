@@ -20,13 +20,12 @@ function main(){
 };
 
 
-$('#boton').hover(function(){
-      var b=0;
-      var a=0;
-      setInterval(function() {
-        $('#fechaPHP').load('index.php/Inicio/preubas/'+b);
-         b= (a++)/60;
-    }, 1000); 
+$('#boton').click(function(){    
+  var b=0;
+  b = $('#Fecha').val();
+    $('#agendaDia').load('index.php/Inicio/buscar/'+b); 
+    $('#Fecha').vla(0);
+  //b = (a++)/60;
 });
 
 $('#Fecha').datepicker({dateFormat: "yy-mm-dd"});

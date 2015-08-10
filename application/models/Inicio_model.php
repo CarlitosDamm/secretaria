@@ -19,6 +19,13 @@ class Inicio_model extends CI_Model {
     }
 
     
+    function eventos($b){
+        $condicion = array(
+                'Fecha' => $b
+            );
+        $consulta = $this->db->get_where('ag_agenda', $condicion);
+        return $consulta;
+    }
 
     function buscar($buscar){
         $condicion = array(
