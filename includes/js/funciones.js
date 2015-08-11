@@ -32,7 +32,12 @@ $('#boton').click(function(){
   //b = (a++)/60;
 });
 
-$('#Fecha').datepicker({dateFormat: "yy-mm-dd"});
+$('#Fecha').datepicker({
+      dateFormat: "yy-mm-dd", 
+      changeMonth: true,
+      changeYear: true,
+    });
+
 $('#FechaD').datepicker({dateFormat: "yy-mm-dd"});
 
 $('#buscar').datepicker({dateFormat: "yy-mm-dd"});
