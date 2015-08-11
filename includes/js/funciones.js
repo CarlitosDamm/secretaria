@@ -21,10 +21,13 @@ function main(){
 
 
 $('#boton').click(function(){    
-  var b=0;
+  var b=0
   b = $('#Fecha').val();
+  if(b == 0){
+    $('#agendaDia').load('index.php/Inicio/error/'); 
+  }else{
     $('#agendaDia').load('index.php/Inicio/buscar/'+b); 
-    $('#Fecha').vla(0);
+  }
   //b = (a++)/60;
 });
 

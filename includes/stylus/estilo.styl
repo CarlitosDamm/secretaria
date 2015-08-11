@@ -59,32 +59,25 @@ body
 	justify-content space-between
 	margin 5px 0px
 .tablaAgenda
+	border 1px solid #003A66
+	border-radius 10px
 	border-spacing 0px
-	margin 0px
-	padding 0px
+	margin 10px 0px
+	padding 10px
 	width 100%
 	tr
 		border 1px solid black
 		border-radius 10px
 		margin 0px
 		padding 0px
-		width 100%
-		&:nth-child(odd)
-			color black
-			background gray
-			th
-				margin 0px
-				padding 0px
-				background gray
-			td
-				background gray
-				padding 2px
-				
+		width 100%				
 	th
 		margin 0px
-		padding 0px
+		padding-left 10px
+		text-align left
 	td
-		padding 2px
+		text-align left
+		padding-left 10px
 //MEdia query, aqui empieza el responsive design de 680 px 0 menos
 @media screen and (max-width: 320px)
 	section
@@ -102,7 +95,7 @@ body
 				width 100%
 	header
 		nav
-			background black
+			background #003A66
 			height auto
 			left -100%
 			margin 0px
@@ -127,7 +120,7 @@ body
 						padding 10px
 						text-decoration none
 						&:hover
-							background #003A66
+							background #FF9E0B
 					span 
 						margin-right 10px
 						

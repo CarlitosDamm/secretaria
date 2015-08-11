@@ -63,7 +63,11 @@ class Inicio extends CI_Controller {
 	public function buscar($b){
 		$datos['eventos'] = $this->Inicio_model->eventos($b);
 		$datos['contador'] = $b;
-		$this->load->view('usuarios/preubas', $datos);
+		$this->load->view('usuarios/preubas', $datos);	
+	}
+
+	public function error(){
+		$this->load->view('usuarios/error');
 	}
 
 	

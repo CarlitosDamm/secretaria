@@ -65,9 +65,11 @@ body {
   margin: 5px 0px;
 }
 .tablaAgenda {
+  border: 1px solid #003a66;
+  border-radius: 10px;
   border-spacing: 0px;
-  margin: 0px;
-  padding: 0px;
+  margin: 10px 0px;
+  padding: 10px;
   width: 100%;
 }
 .tablaAgenda tr {
@@ -77,25 +79,14 @@ body {
   padding: 0px;
   width: 100%;
 }
-.tablaAgenda tr:nth-child(odd) {
-  color: #000;
-  background: #808080;
-}
-.tablaAgenda tr:nth-child(odd) th {
-  margin: 0px;
-  padding: 0px;
-  background: #808080;
-}
-.tablaAgenda tr:nth-child(odd) td {
-  background: #808080;
-  padding: 2px;
-}
 .tablaAgenda th {
   margin: 0px;
-  padding: 0px;
+  padding-left: 10px;
+  text-align: left;
 }
 .tablaAgenda td {
-  padding: 2px;
+  text-align: left;
+  padding-left: 10px;
 }
 @media screen and (max-width: 320px) {
   section {
@@ -115,7 +106,7 @@ body {
     width: 100%;
   }
   header nav {
-    background: #000;
+    background: #003a66;
     height: auto;
     left: -100%;
     margin: 0px;
@@ -144,7 +135,7 @@ body {
     text-decoration: none;
   }
   header nav ul li a:hover {
-    background: #003a66;
+    background: #ff9e0b;
   }
   header nav ul li span {
     margin-right: 10px;
