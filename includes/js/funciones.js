@@ -19,14 +19,15 @@ function main(){
   });
 };
 
+$('#Nombre').focus();
 
 $('#boton').click(function(){    
   var b=0
   b = $('#Fecha').val();
   if(b == 0){
-    $('#agendaDia').load('index.php/Inicio/error/'); 
+    $('#agendaDia').load('error'); 
   }else{
-    $('#agendaDia').load('index.php/Inicio/buscar/'+b); 
+    $('#agendaDia').load('buscar/'+b); 
   }
   //b = (a++)/60;
 });

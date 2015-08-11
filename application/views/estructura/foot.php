@@ -1,5 +1,7 @@
 <?php
-?>			
+?>			<footer>
+				<p><a href="http://www.vyde.ujed.mx" target="_blank">| VyDE UJED |</a></p>
+			</footer>
 		</div>
 	</body>
 	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>

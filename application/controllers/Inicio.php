@@ -41,7 +41,7 @@ class Inicio extends CI_Controller {
 				        $a = $this->session->userdata('nombre');
 					       switch($a){
 					        	case 0:
-					        		$datos['direccion'] = 'Admin/principal';
+					        		$datos['direccion'] = 'Admin/inicio';
 					        		$this->load->view('redirect', $datos);
 					        	break;					     
 					        	case 1: 
@@ -54,8 +54,8 @@ class Inicio extends CI_Controller {
 					echo "No hay usuarios con esos datos";
 				}
 		}else{
-			$this->load->view('estructura/head');
-			$this->load->view('usuarios/inicio');
+			$this->load->view('estructura/head1');
+			$this->load->view('usuarios/acceso');
 			$this->load->view('estructura/foot');
 		}
 	}
