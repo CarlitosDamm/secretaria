@@ -39,4 +39,11 @@ class Admin extends CI_Controller {
 		$this->load->view('usuarios/error');
 	}
 
+	//Controladores para los links
+	public function agenda(){
+		$this->load->view('estructura/head');
+		$this->load->view('admin/agenda');
+		$this->load->view('estructura/foot');
+	}
+
 }
