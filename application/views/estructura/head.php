@@ -19,6 +19,7 @@
 			</div>
 			<nav>
 				<ul>
+					<li><a href="<?=base_url()?>/index.php/Admin/inicio"><span class="icon-home"></span>Inicio </a></li>
 					<li><a href=""><span class="icon-calendar"></span>Agenda </a></li>
 					<li><a href=""><span class="icon-upload"></span>Documentos </a></li>
 				</ul>
