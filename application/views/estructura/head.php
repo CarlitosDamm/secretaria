@@ -22,6 +22,12 @@
 					<?
 						switch ($tipo) {
 							case 0:
+								?><li><a href='<?=base_url()?>index.php/Admin/inicio'><span class='icon-home'></span>Inicio </a></li><?
+							break;
+							case 1:
+								echo '<li><a href="inicio"><span class="icon-home"></span>Inicio </a></li>';
+							break;
+							case 2:
 								echo '<li><a href="inicio"><span class="icon-home"></span>Inicio </a></li>';
 							break;
 							
@@ -31,7 +37,7 @@
 						}
 					?>
 					<li><a href="<?=base_url()?>index.php/Admin/agenda"><span class="icon-calendar"></span>Agenda </a></li>
-					<li><a href=""><span class="icon-upload"></span>Documentos </a></li>
+					<li><a href="<?=base_url()?>index.php/Admin/documentos"><span class="icon-upload"></span>Documentos </a></li>
 				</ul>
 			</nav>
 		</header>

@@ -209,6 +209,11 @@ body {
     margin: 10px;
     width: 30%;
   }
+  .tableM .bm {
+    margin: 10px;
+    width: 25%;
+    border: 1px solid #ff9e0b;
+  }
 }
 /*
 	Media Query para el diseño de 1000 px
