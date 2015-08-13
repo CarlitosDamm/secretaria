@@ -30,7 +30,6 @@
 							break;
 						}
 					?>
-				
 					<li><a href="<?=base_url()?>index.php/Admin/agenda"><span class="icon-calendar"></span>Agenda </a></li>
 					<li><a href=""><span class="icon-upload"></span>Documentos </a></li>
 				</ul>
