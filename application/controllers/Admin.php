@@ -23,9 +23,10 @@ class Admin extends CI_Controller {
 	 */
    	public function inicio(){
    			$fecha = mdate('%Y-%m-%d');
+   			$datos['tipo'] = $this->session->userdata('tipo');
    			$datos['fecha'] = $fecha;
    			$datos['agenda'] = $this->Consulta_model->agenda($fecha);
-   			$this->load->view('estructura/head');
+   			$this->load->view('estructura/head', $datos);
 			$this->load->view('admin/inicio', $datos);
 			$this->load->view('estructura/foot');
 	}

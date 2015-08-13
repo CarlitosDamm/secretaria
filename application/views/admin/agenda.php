@@ -1,3 +1,6 @@
 <?php
-	echo "Buenos dias";
+	
 ?>
+<div class="row">
+	<?='hola'?>
+</div>
