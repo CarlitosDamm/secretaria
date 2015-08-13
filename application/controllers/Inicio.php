@@ -38,7 +38,7 @@ class Inicio extends CI_Controller {
 			               'logueado' => TRUE
 			            );
 				        $this->session->set_userdata($usuario_data);
-				        $a = $this->session->userdata('nombre');
+				        $a = $this->session->userdata('tipo');
 					       switch($a){
 					        	case 0:
 					        		$datos['direccion'] = 'Admin/inicio';
