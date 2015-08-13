@@ -24,7 +24,47 @@ class Admin extends CI_Controller {
    	public function inicio(){
    			$fecha = mdate('%Y-%m-%d');
    			$datos['tipo'] = $this->session->userdata('tipo');
-   			$datos['fecha'] = $fecha;
+
+			$fecha_modificada=explode('-',$fecha);
+		switch ($fecha_modificada[1]) {
+			case '01':
+				$mes='Enero';
+				break;
+			case '02':
+				$mes='Febrero';
+				break;
+			case '03':
+				$mes='Marzo';
+				break;
+			case '04':
+				$mes='Abril';
+				break;
+			case '05':
+				$mes='Mayo';
+				break;
+			case '06':
+				$mes='Junio';
+				break;
+			case '07':
+				$mes='Julio';
+				break;
+			case '08':
+				$mes='Agosto';
+				break;
+			case '09':
+				$mes='Septiembre';
+				break;
+			case '10':
+				$mes='Octubre';
+				break;
+			case '11':
+				$mes='Noviembre';
+				break;
+			case '12':
+				$mes='Diciembre';
+				break;
+			}
+			$datos['fecha'] = "No hay eventos para el ".$fecha_modificada[2]." de ".$mes." del ".$fecha_modificada[0];
    			$datos['agenda'] = $this->Consulta_model->agenda($fecha);
    			$this->load->view('estructura/head', $datos);
 			$this->load->view('admin/inicio', $datos);

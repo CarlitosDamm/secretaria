@@ -31,7 +31,7 @@
 						</table>
 					<?}
 				}else{?>
-					<h4>No hay eventos para el <?=$fecha?></h4>
+					<h4><?=$fecha?></h4>
 				<?}?>
 				
 			</article>
