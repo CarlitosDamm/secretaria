@@ -5,8 +5,8 @@
 	);
 
 	$fecha = array(
-		'Name' => 'Fecha', 
-		'id' => 'Fecha'
+		'Name' => 'FechaD', 
+		'id' => 'FechaD'
 	);
 	$tramite = array(
 		'Name' => 'Tramite', 
@@ -39,8 +39,8 @@
 <div class="row">
 	<section>
 		<article>
-			<h4>Registro de Documentos</h4>
-			<?=form_open()?>
+			<h4>Registro de Documentos <span class="masDocs"> + </span></h4>
+			<?=form_open_multipart()?>
 				<table class="tableM">
 					<tr><th>Hora: </th></tr>
 					<tr><td><?=form_input($hora)?></td></tr>
@@ -49,7 +49,7 @@
 					<tr><th>Tramite: </th></tr>
 					<tr><td><?=form_input($tramite)?></td></tr>
 					<tr><th>Observacion: </th></tr>
-					<tr><td><?=form_input($onservacion)?></td></tr>
+					<tr><td><?=form_input($observacion)?></td></tr>
 					<tr><th>Quien Envia: </th></tr>
 					<tr><td><?=form_input($quien)?></td></tr>
 					<tr><th>Documento: </th></tr>

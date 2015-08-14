@@ -88,8 +88,44 @@ class Admin extends CI_Controller {
 	}
 
 	public function documentos(){
-		$this->load->view('estructura/head');
-		$this->load->view('admin/documentos');
+		if($_POST){
+			$hora = $this->input->post('Hora');
+			$fechaD = $this->input->post('FechaD');
+			$tramite = $this->input->post('Tramite');
+			$observacion = $this->input->post('Observacion');
+			$quien = $this->input->post('Quien');
+			$doc = $this->input->post('Doc');
+
+				$nom_doc =substr(md5(uniqid(rand())),0,6);
+				$config['file_name'] = $nom_doc;
+				$config['upload_path'] = './includes/docs/';
+				$config['allowed_types'] = '*';
+				$config['max_size']	= '10000';
+				echo $doc;
+				$this->load->library('upload', $config);
+				if(!$this->upload->do_upload('Doc')){
+					echo $this->upload->display_errors('<p>', '</p>');
+				}
+
+				$upload_data = $this->upload->data();
+				$nom_doc = $nom_doc.$upload_data['file_ext'];
+				echo $nom_doc;
+
+			$this->Consulta_model->agregarD($hora, $fechaD, $tramite, $observacion, $quien, $nom_doc);
+			$datos['direccion'] = 'Admin/ver';
+			$this->load->view('redirect', $datos);
+		}else{
+			$this->load->view('estructura/head');
+			$this->load->view('admin/documentos');
+			$this->load->view('estructura/foot');
+		}
+	}
+
+	public function ver(){
+		$datos['tipo'] = $this->session->userdata('tipo');
+		$datos['docs']=$this->Consulta_model->verDocs();
+		$this->load->view('estructura/head', $datos);
+		$this->load->view('admin/verDocs', $datos);
 		$this->load->view('estructura/foot');
 	}
 
