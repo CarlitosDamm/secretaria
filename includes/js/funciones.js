@@ -1,7 +1,8 @@
 $(document).ready(main);
 
 var contador = 1;
-
+var aux = 1;
+$('.tableM').hide('fast');
 function main(){
    $('.menu').click(function(){
     //$('nav').toggle()
@@ -43,7 +44,20 @@ $('#FechaD').datepicker({dateFormat: "yy-mm-dd"});
 $('#buscar').datepicker({dateFormat: "yy-mm-dd"});
 $('#buscarD').datepicker({dateFormat: "yy-mm-dd"});
 
-  
+
+
+  $('.masDocs').click(function(){
+  //$('nav').toggle()
+    if(aux == 1){
+      $('.tableM').show();
+      aux = 0;
+    }else{
+      $('.tableM').hide();
+      aux = 1;
+    }
+  });
+
+
 
   $(function() {
     var availableTags = [

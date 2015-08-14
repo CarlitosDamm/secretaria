@@ -79,14 +79,26 @@ body {
   padding: 0px;
   width: 100%;
 }
-.tablaAgenda th {
+.tablaAgenda tr th {
   margin: 0px;
   padding-left: 10px;
   text-align: left;
 }
-.tablaAgenda td {
+.tablaAgenda tr td {
   text-align: left;
   padding-left: 10px;
+  height: auto;
+  padding: 10px;
+}
+.tablaAgenda tr td a {
+  background: #008000;
+  border: 1px solid #008000;
+  border-radius: 5px;
+  color: #fff;
+  height: auto;
+  padding: 10px;
+  text-decoration: none;
+  width: auto;
 }
 @media screen and (min-width: 320px) {
   section {
@@ -94,6 +106,7 @@ body {
   }
   section article {
     float: left;
+    height: auto;
     margin-top: 10px;
     position: relative;
     width: 100%;
@@ -213,6 +226,16 @@ body {
     margin: 10px;
     width: 25%;
     border: 1px solid #ff9e0b;
+  }
+  .masDocs {
+    color: #008000;
+    display: flex;
+    font-size: 30px;
+    justify-content: center;
+    margin-left: 5px;
+    margin-top: -10px;
+    padding: 0px;
+    width: 40px;
   }
 }
 /*

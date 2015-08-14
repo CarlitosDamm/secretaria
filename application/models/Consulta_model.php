@@ -27,7 +27,6 @@ class Consulta_model extends CI_Model {
 
     function verDocs(){
         $this->db->order_by('IdDocumentos', 'DESC');
-        $this->db->join('ab_areas', 'bc_documentos.IdArea = ab_areas.IdArea');
         $consulta = $this->db->get('bc_documentos');
         return $consulta;
     }

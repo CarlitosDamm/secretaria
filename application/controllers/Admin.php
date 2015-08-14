@@ -88,6 +88,8 @@ class Admin extends CI_Controller {
 	}
 
 	public function documentos(){
+		$datos['tipo'] = $this->session->userdata('tipo');
+		$datos['docs']=$this->Consulta_model->verDocs();
 		if($_POST){
 			$hora = $this->input->post('Hora');
 			$fechaD = $this->input->post('FechaD');
@@ -115,8 +117,8 @@ class Admin extends CI_Controller {
 			$datos['direccion'] = 'Admin/ver';
 			$this->load->view('redirect', $datos);
 		}else{
-			$this->load->view('estructura/head');
-			$this->load->view('admin/documentos');
+			$this->load->view('estructura/head', $datos);
+			$this->load->view('admin/documentos', $datos);
 			$this->load->view('estructura/foot');
 		}
 	}
