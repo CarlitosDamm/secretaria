@@ -227,6 +227,39 @@ body {
     width: 25%;
     border: 1px solid #ff9e0b;
   }
+  .tableMA {
+    border: 1px solid #ff9e0b;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+  }
+  .tableMA th {
+    text-align: left;
+    height: 100%;
+    padding: 10px;
+  }
+  .tableMA td {
+    display: flex;
+    justify-content: center;
+  }
+  .tableMA td input {
+    height: 30px;
+    border: 1px solid #003a66;
+    border-radius: 3px;
+  }
+  .tableMA #botonM {
+    background: #003a66;
+    border: 1px solid #003a66;
+    color: #fff;
+    height: 35px;
+    margin: 10px;
+    width: 30%;
+  }
+  .tableMA .bm {
+    margin: 10px;
+    width: 25%;
+    border: 1px solid #ff9e0b;
+  }
   .masDocs {
     color: #008000;
     display: flex;

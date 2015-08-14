@@ -3,7 +3,7 @@
 		<article></article>
 		<article>
 			<?=form_open()?>
-			<table class="tableM">
+			<table class="tableMA">
 				<tr>
 					<th>Nombre: </th>
 				</tr>
@@ -22,6 +22,5 @@
 			<?=form_close()?>
 			</table>
 		</article>
-		<article></article>
 	</section>
 </div>
