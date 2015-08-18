@@ -124,7 +124,19 @@ class Admin extends CI_Controller {
 		}
 	}
 
-	public function ver(){
+	public function buscarDocs(){
+		$b = $this->input->post('buscarDocs');
+		$datos['tipo'] = $this->session->userdata('tipo');
+		$datos['docs'] = $this->Consulta_model->buscarDocs($b);
+		$datos['contador'] = $b;
+		$this->load->view('estructura/head', $datos);
+		$this->load->view('admin/buscarDocs', $datos);	
+		$this->load->view('estructura/foot');
+		
+			
+	}
+
+	public function verDocs(){
 		$datos['tipo'] = $this->session->userdata('tipo');
 		$datos['docs']=$this->Consulta_model->verDocs();
 		$this->load->view('estructura/head', $datos);

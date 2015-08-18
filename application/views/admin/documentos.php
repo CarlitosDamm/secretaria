@@ -40,9 +40,17 @@
 		'class' => 'boton bm'
 	);
 
-	$buscar = array(
-			'name' => 'Buscar', 
-			'id' => 'Buscar', 
+	$botonDocs = array(
+		'id' => 'botonDocs', 
+		'name' => 'Docs', 
+		'type' => 'submit', 
+		'value' => 'Buscar', 
+		'class' => 'boton bm'
+	);
+
+	$buscarDocs = array(
+			'name' => 'buscarDocs', 
+			'id' => 'buscarDocs', 
 			'type' => 'text', 
 			'placeholder' => 'Buscar Folio'
 
@@ -53,7 +61,7 @@
 	<section>
 		<article>
 			<h4>Registro de Documentos <span class="masDocs"> + </span></h4>			
-			<?=form_open_multipart()?>
+			<?=form_open_multipart('admin/documentos')?>
 				<table class="tableM">
 					<tr><th>Folio: </th></tr>
 					<tr><td><?=form_input($folio)?></td></tr>
@@ -76,12 +84,13 @@
 	</section>
 </div>
 <div class="row">
+	<div id="Docs"></div>
 	<section>
 		<article>
-			<?=form_open()?>
-			<table>
+			<?=form_open('Admin/buscarDocs')?>
+			<table class="tableMA">
 				<tr>
-					<td><?=form_input($buscar)?></td>
+					<td><?=form_input($buscarDocs)?></td><td><?=form_submit($botonDocs)?></td>
 				</tr>
 			</table>
 				
@@ -97,6 +106,7 @@
 					foreach($docs -> result() as $row){
 						echo "<article class='mitad margen'>";
 							echo "<table class='tablaAgenda'>";
+								echo "<tr><th>Folio: </th><td>".$row->Folio."</td></tr>";
 								echo "<tr><th>Fecha: </th><td>".$row->Fecha."</td></tr>";
 								echo "<tr><th>Hora: </th><td>".$row->Hora."</td></tr>";
 								echo "<tr><th>Tramite: </th><td>".$row->Tramite."</td></tr>";
