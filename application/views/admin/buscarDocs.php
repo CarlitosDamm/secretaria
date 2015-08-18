@@ -34,7 +34,5 @@
 		<section>
 			<article><a class="botonBack" href="<?=base_url()?>index.php/Admin/documentos"> Regresar</a></article>
 		</section>
-	
-	
 </div>
 <br>
