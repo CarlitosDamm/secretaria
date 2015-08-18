@@ -40,12 +40,13 @@ class Consulta_model extends CI_Model {
             );
         $this->db->insert('ag_agenda', $condicion);
     }
-    function agregarD($hora, $fechaD, $tramite, $observacion, $quien, $nom_doc){
+    function agregarD($folio, $hora, $fechaD, $tramite, $observacion, $quien, $nom_doc){
         $condicion = array(
+                'Folio' => $folio,
                 'Hora' => $hora,
                 'Fecha' => $fechaD, 
                 'Tramite' => $tramite,
-                'Observacion' => $observacion, 
+                'Observacion' => $observacion,
                 'IdArea' => $quien, 
                 'Doc'   => $nom_doc
             );

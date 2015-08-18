@@ -280,6 +280,9 @@ body {
   body {
     background: #fff;
   }
+  article {
+    padding: 5px;
+  }
   .rowN {
     width: 90%;
   }
@@ -316,7 +319,7 @@ body {
     margin: 10px 0px;
   }
   .mitad {
-    width: 45%;
+    width: 48%;
   }
   .redondo {
     background: #003a66;

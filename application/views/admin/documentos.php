@@ -21,6 +21,11 @@
 		'id' => 'Quien'
 	);
 
+	$folio = array(
+		'Name' => 'Folio', 
+		'id' => 'Folio'
+	);
+
 	$doc = array(
 		'name'	=> 'Doc', 
 		'id'	=> 'Doc',
@@ -42,6 +47,8 @@
 			<h4>Registro de Documentos <span class="masDocs"> + </span></h4>			
 			<?=form_open_multipart()?>
 				<table class="tableM">
+					<tr><th>Folio: </th></tr>
+					<tr><td><?=form_input($folio)?></td></tr>
 					<tr><th>Hora: </th></tr>
 					<tr><td><?=form_input($hora)?></td></tr>
 					<tr><th>Fecha: </th></tr>
@@ -66,7 +73,7 @@
 			<?php
 				if($docs -> num_rows() > 0){
 					foreach($docs -> result() as $row){
-						echo "<article>";
+						echo "<article class='mitad margen'>";
 							echo "<table class='tablaAgenda'>";
 								echo "<tr><th>Fecha: </th><td>".$row->Fecha."</td></tr>";
 								echo "<tr><th>Hora: </th><td>".$row->Hora."</td></tr>";

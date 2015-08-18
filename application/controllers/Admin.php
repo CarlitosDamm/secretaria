@@ -91,6 +91,7 @@ class Admin extends CI_Controller {
 		$datos['tipo'] = $this->session->userdata('tipo');
 		$datos['docs']=$this->Consulta_model->verDocs();
 		if($_POST){
+			$folio = $this->input->post('Folio');
 			$hora = $this->input->post('Hora');
 			$fechaD = $this->input->post('FechaD');
 			$tramite = $this->input->post('Tramite');
@@ -113,7 +114,7 @@ class Admin extends CI_Controller {
 				$nom_doc = $nom_doc.$upload_data['file_ext'];
 				echo $nom_doc;
 
-			$this->Consulta_model->agregarD($hora, $fechaD, $tramite, $observacion, $quien, $nom_doc);
+			$this->Consulta_model->agregarD($folio, $hora, $fechaD, $tramite, $observacion, $quien, $nom_doc);
 			$datos['direccion'] = 'Admin/ver';
 			$this->load->view('redirect', $datos);
 		}else{
