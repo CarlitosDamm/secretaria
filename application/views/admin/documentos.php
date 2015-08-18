@@ -39,6 +39,14 @@
 		'value' => 'Agregar', 
 		'class' => 'boton bm'
 	);
+
+	$buscar = array(
+			'name' => 'Buscar', 
+			'id' => 'Buscar', 
+			'type' => 'text', 
+			'placeholder' => 'Buscar Folio'
+
+		);
 ?>
 
 <div class="row">
@@ -63,6 +71,20 @@
 					<tr><td><?=form_input($doc)?></td></tr>
 					<tr><td><?=form_submit($boton)?></td></tr>
 				</table>
+			<?=form_close()?>
+		</article>
+	</section>
+</div>
+<div class="row">
+	<section>
+		<article>
+			<?=form_open()?>
+			<table>
+				<tr>
+					<td><?=form_input($buscar)?></td>
+				</tr>
+			</table>
+				
 			<?=form_close()?>
 		</article>
 	</section>
