@@ -54,9 +54,13 @@ $('#buscarD').datepicker({dateFormat: "yy-mm-dd"});
   //$('nav').toggle()
     if(aux == 1){
       $('.tableM').show();
+      $('.tableMA').hide();
+      $('.tablaAgenda').hide();
       aux = 0;
     }else{
       $('.tableM').hide();
+      $('.tableMA').show();
+      $('.tablaAgenda').show();
       aux = 1;
     }
   });

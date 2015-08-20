@@ -23,7 +23,8 @@
 
 	$folio = array(
 		'Name' => 'Folio', 
-		'id' => 'Folio'
+		'id' => 'Folio',
+		'placeholder' => 'Folio'
 	);
 
 	$doc = array(
