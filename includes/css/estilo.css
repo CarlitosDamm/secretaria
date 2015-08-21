@@ -227,6 +227,39 @@ body {
     width: 25%;
     border: 1px solid #ff9e0b;
   }
+  .tableE {
+    border: 1px solid #ff9e0b;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+  }
+  .tableE th {
+    text-align: left;
+    height: 100%;
+    padding: 10px;
+  }
+  .tableE td {
+    display: flex;
+    justify-content: center;
+  }
+  .tableE td input {
+    height: 30px;
+    border: 1px solid #003a66;
+    border-radius: 3px;
+  }
+  .tableE #botonM {
+    background: #003a66;
+    border: 1px solid #003a66;
+    color: #fff;
+    height: 35px;
+    margin: 10px;
+    width: 30%;
+  }
+  .tableE .bm {
+    margin: 10px;
+    width: 25%;
+    border: 1px solid #ff9e0b;
+  }
   .tableMA {
     border: 1px solid #ff9e0b;
     border-radius: 10px;
@@ -260,7 +293,50 @@ body {
     width: 25%;
     border: 1px solid #ff9e0b;
   }
+  .tableEA {
+    border: 1px solid #ff9e0b;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+  }
+  .tableEA th {
+    text-align: left;
+    height: 100%;
+    padding: 10px;
+  }
+  .tableEA td {
+    display: flex;
+    justify-content: center;
+  }
+  .tableEA td input {
+    height: 30px;
+    border: 1px solid #003a66;
+    border-radius: 3px;
+  }
+  .tableEA #botonM {
+    background: #003a66;
+    border: 1px solid #003a66;
+    color: #fff;
+    height: 35px;
+    margin: 10px;
+    width: 30%;
+  }
+  .tableEA .bm {
+    margin: 10px;
+    width: 25%;
+    border: 1px solid #ff9e0b;
+  }
   .masDocs {
+    color: #008000;
+    display: flex;
+    font-size: 30px;
+    justify-content: center;
+    margin-left: 5px;
+    margin-top: -10px;
+    padding: 0px;
+    width: 40px;
+  }
+  .masEven {
     color: #008000;
     display: flex;
     font-size: 30px;

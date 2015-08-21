@@ -55,7 +55,7 @@
 			'type' => 'text', 
 			'placeholder' => 'Buscar Folio'
 
-		);
+	);
 ?>
 
 <div class="row">

@@ -5,6 +5,7 @@ var aux = 1;
 
 //muestra elementos al cargar la pagina
 $('.tableM').hide('fast');
+$('.tableE').hide('fast');
 function main(){
    $('.menu').click(function(){
     //$('nav').toggle()
@@ -45,8 +46,11 @@ $('#Fecha').datepicker({
       changeYear: true,
     });
 $('#FechaD').datepicker({dateFormat: "yy-mm-dd"});
+$('#FechaE').datepicker({dateFormat: "yy-mm-dd"});
 $('#buscar').datepicker({dateFormat: "yy-mm-dd"});
 $('#buscarD').datepicker({dateFormat: "yy-mm-dd"});
+$('#buscarEven').datepicker({dateFormat: "yy-mm-dd"});
+
 
 
 //Muestra el formulario para agregar docs
@@ -61,6 +65,22 @@ $('#buscarD').datepicker({dateFormat: "yy-mm-dd"});
       $('.tableM').hide();
       $('.tableMA').show();
       $('.tablaAgenda').show();
+      aux = 1;
+    }
+  });
+
+  //Muestra el formulario para agregar eventos
+  $('.masEven').click(function(){
+  //$('nav').toggle()
+    if(aux == 1){
+      $('.tableE').show();
+      $('.tableEA').hide();
+      //$('.tablaAgenda').hide();
+      aux = 0;
+    }else{
+      $('.tableE').hide();
+      $('.tableEA').show();
+      //$('.tablaAgenda').show();
       aux = 1;
     }
   });
