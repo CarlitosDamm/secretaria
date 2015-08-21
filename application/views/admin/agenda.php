@@ -16,6 +16,12 @@
 		'Name' => 'Hora', 
 		'id' => 'Hora'
 	);
+	$doc = array(
+		'name'	=> 'Doc', 
+		'id'	=> 'Doc',
+		'value'	=> set_value('Doc'),
+		'type' 	=> 'file'
+	);
 	$boton = array(
 		'id' => 'boton', 
 		'name' => 'boton', 
@@ -51,6 +57,8 @@
 					<tr><td><?=form_input($fecha)?></td></tr>
 					<tr><th>Hora: </th></tr>
 					<tr><td><?=form_input($hora)?></td></tr>
+					<tr><th>Documento: </th></tr>
+					<tr><td><?=form_input($doc)?></td></tr>
 					<tr><td><?=form_submit($boton)?></td></tr>
 				</table>
 			<?=form_close()?>
