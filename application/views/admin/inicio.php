@@ -16,7 +16,7 @@
 	<div class="full">
 		<section>
 			<article class="tabla" id="agendaDia">
-				<?if($agenda -> num_rows() > 0 ){
+				<? if($agenda -> num_rows() > 0 ){
 					foreach($agenda -> result() as $row){?>
 						<table class="tablaAgenda">
 							<tr>

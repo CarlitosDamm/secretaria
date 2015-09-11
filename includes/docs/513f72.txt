@@ -1,0 +1,49 @@
+<div class="row">
+	<section>
+		<table class="tableMA">
+	 		<tr>
+	 			<th colspan="4">
+	 				<center>
+	 					<h1>Agenda del Dia <a href="#" id="agregar"><span class="glyphicon glyphicon-plus"></span></a></h1>
+	 			 	</center>
+	 		 	</th>
+	 		</tr>
+	 		<article>
+	 			<? 
+	 				if($agenda->num_rows() > 0){
+	 					echo "<tr><th>Fecha</th><th>Evento</th><th>Hora</th><th>Lugar</th></tr>";
+	 					foreach($agenda->result() as $row){
+	 				 		echo "<tr><td>".$row->Fecha."</td><td>".$row->Evento."</td><td>".$row->Hora."</td><td>".$row->Lugar."</td></tr>";
+	 				 	}
+	 				}else{
+	 					echo "<tr><th colspan='4'><center>No hay Ningun Evento para el dia de hoy</center></th></tr>";
+	 				}
+	 			?>
+	 		</article>
+		</table>
+	</section>
+</div>
+<div class="row" id="result">
+	<section>	
+		<table class="table table-bordered">
+			<tr>
+				<th colspan="4">
+					<center>
+						<h1>Agenda De Mañana</h1>
+					</center>
+				</th>
+			</tr>
+			<tr>
+				<? 
+					if($manana->num_rows() > 0){
+						echo "<tr><th>Fecha</th><th>Evento</th><th>Hora</th><th>Lugar</th></tr>";
+						foreach($manana->result() as $row){
+							echo "<tr><td>".$row->Fecha."</td><td>".$row->Evento."</td><td>".$row->Hora."</td><td>".$row->Lugar."</td></tr>";
+						}
+					}else{
+						echo "<tr><th colspan='4'><center>No hay Ningun Evento para el dia de hoy</center></th></tr>";
+					}
+				?>
+		</table>
+	</section>
+</div>

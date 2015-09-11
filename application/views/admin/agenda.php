@@ -13,13 +13,14 @@
 		'id' => 'FechaE'
 	);
 	$hora = array(
-		'Name' => 'Hora', 
+		'Name' => 'Hora',
+		'type' => 'time', 
 		'id' => 'Hora'
 	);
-	$doc = array(
-		'name'	=> 'Doc', 
-		'id'	=> 'Doc',
-		'value'	=> set_value('Doc'),
+	$evidencia = array(
+		'name'	=> 'Evidencia', 
+		'id'	=> 'Evidencia',
+		'value'	=> set_value('Evidencia'),
 		'type' 	=> 'file'
 	);
 	$boton = array(
@@ -58,7 +59,7 @@
 					<tr><th>Hora: </th></tr>
 					<tr><td><?=form_input($hora)?></td></tr>
 					<tr><th>Documento: </th></tr>
-					<tr><td><?=form_input($doc)?></td></tr>
+					<tr><td><?=form_input($evidencia)?></td></tr>
 					<tr><td><?=form_submit($boton)?></td></tr>
 				</table>
 			<?=form_close()?>
@@ -69,7 +70,7 @@
 	<div id="Docs"></div>
 	<section>
 		<article>
-			<?=form_open('Admin/buscarDocs')?>
+			<?=form_open('Admin/buscarEven')?>
 			<table class="tableEA">
 				<tr>
 					<td><?=form_input($buscarEven)?></td><td><?=form_submit($botonEven)?></td>

@@ -40,13 +40,24 @@ class Consulta_model extends CI_Model {
         $consulta = $this->db->get('bc_documentos');
         return $consulta;
     }
+
+    function buscarAgenda($b){
     
-    function agregar_agenda($evento, $lugar, $fecha, $hora){
+        $condicion = array(
+               'Fecha' => $b
+           );     
+
+        $consulta = $this->db->get_where('ag_agenda', $condicion);
+        return $consulta;
+    }
+    
+    function agregar_agenda($evento, $lugar, $fecha, $hora, $evidencia){
         $condicion = array(
                 'Evento'    => $evento,
                 'Lugar'     => $lugar, 
                 'Fecha'     => $fecha,
-                'Hora'      => $hora
+                'Hora'      => $hora,
+                'Evidencia' => $evidencia
             );
         $this->db->insert('ag_agenda', $condicion);
     }

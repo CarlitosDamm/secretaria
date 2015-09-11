@@ -82,9 +82,64 @@ class Admin extends CI_Controller {
 
 	//Controladores para los links
 	public function agenda(){
-		$this->load->view('estructura/head');
-		$this->load->view('admin/agenda');
+
+		$datos['tipo'] = $this->session->userdata('tipo');
+
+		if($_POST){
+
+			$fecha     = $this->input->post('FechaE');
+			$hora      = $this->input->post('Hora');
+			$evento    = $this->input->post('Evento');
+			$lugar     = $this->input->post('Lugar');
+			$evidencia = $this->input->post('Evidencia');
+			
+			$nom_doc = substr(md5(uniqid(rand())),0,6);
+			$config['file_name'] = $nom_doc;
+			$config['upload_path'] = './includes/docs/';
+			$config['allowed_types'] = '*';
+			$config['max_size']	= '10000';
+			$this->load->library('upload', $config);
+			if(!$this->upload->do_upload('Evidencia')){
+				echo $this->upload->display_errors('<p>', '</p>');
+			}
+			$upload_data = $this->upload->data();
+			$nom_doc = $nom_doc.$upload_data['file_ext'];
+
+			if(strpos($nom_doc, '.') === false){
+
+			$nom_doc = 'Sin evidencia';
+			$this->Consulta_model->agregar_agenda($evento, $lugar, $fecha, $hora, $nom_doc);
+			$datos['direccion']='Admin/agenda';
+			$datos['alerta']='1';
+			$this->load->view('redirect', $datos);
+
+			}else{
+
+				$this->Consulta_model->agregar_agenda($evento, $lugar, $fecha, $hora, $nom_doc);
+				$datos['direccion']='Admin/agenda';
+				$datos['alerta']='1';
+				$this->load->view('redirect', $datos);
+
+			}
+		}else {
+
+			//$this->Consulta_model->agenda();	
+			$this->load->view('estructura/head', $datos);
+			$this->load->view('admin/agenda');
+			$this->load->view('estructura/foot');
+
+		}
+	}
+
+	public function buscarEven(){
+		$b = $this->input->post('buscarEven');
+		$datos['tipo'] = $this->session->userdata('tipo');
+		$datos['docs'] = $this->Consulta_model->buscarAgenda($b);
+		$datos['contador'] = $b;
+		$this->load->view('estructura/head', $datos);
+		$this->load->view('admin/buscarEven', $datos);	
 		$this->load->view('estructura/foot');
+
 	}
 
 	public function documentos(){
