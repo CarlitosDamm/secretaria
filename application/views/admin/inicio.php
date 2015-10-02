@@ -35,10 +35,6 @@
 				<?}?>
 				
 			</article>
-			<article class="tabla">
-				<h1>Documentos del Dia</h1>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis consequatur, modi unde labore officia eum, doloremque consequuntur, architecto facilis esse nemo nulla velit. Quo similique, non quis eius quibusdam quam?</p>	
-			</article>
 		</section>
 	</div>
 </div>

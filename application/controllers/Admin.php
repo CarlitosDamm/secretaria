@@ -124,8 +124,10 @@ class Admin extends CI_Controller {
 		}else {
 
 			//$this->Consulta_model->agenda();	
+			$hoy=date('Y-m-d');
+			$datos['agenda']=$this->Consulta_model->verEven($hoy);
 			$this->load->view('estructura/head', $datos);
-			$this->load->view('admin/agenda');
+			$this->load->view('admin/agenda', $datos);
 			$this->load->view('estructura/foot');
 
 		}

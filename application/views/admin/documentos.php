@@ -1,37 +1,44 @@
 <?
 	$hora = array(
-		'Name' => 'Hora', 
-		'id' => 'Hora'
+		'Name' => 'Hora',
+		'type' => 'time', 
+		'id' => 'Hora',
+		'required' => 'required'
 	);
 
 	$fecha = array(
 		'Name' => 'FechaD', 
-		'id' => 'FechaD'
+		'id' => 'FechaD',
+		'required' => 'required'
 	);
 	$tramite = array(
 		'Name' => 'Tramite', 
-		'id' => 'tags'
+		'id' => 'tags',
+		'required' => 'required'
 	);
 	$observacion = array(
 		'Name' => 'Observacion', 
-		'id' => 'Observacion'
+		'id' => 'Observacion',
+		'required' => 'required'
 	);
 	$quien = array(
 		'Name' => 'Quien', 
-		'id' => 'Quien'
+		'id' => 'Quien',
+		'required' => 'required'
 	);
 
 	$folio = array(
 		'Name' => 'Folio', 
 		'id' => 'Folio',
-		'placeholder' => 'Folio'
+		'required' => 'required'
 	);
 
 	$doc = array(
 		'name'	=> 'Doc', 
 		'id'	=> 'Doc',
 		'value'	=> set_value('Doc'),
-		'type' 	=> 'file'
+		'type' 	=> 'file',
+		'required' => 'required'
 	);
 	$boton = array(
 		'id' => 'boton', 

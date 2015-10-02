@@ -1,21 +1,25 @@
 <?
 	$evento = array(
 		'Name' => 'Evento', 
-		'id' => 'Evento'
+		'id' => 'Evento',
+		'required' => 'required'
 	);
 
 	$lugar = array(
 		'Name' => 'Lugar', 
-		'id' => 'Lugar'
+		'id' => 'Lugar',
+		'required' => 'required'
 	);
 	$fecha = array(
 		'Name' => 'FechaE', 
-		'id' => 'FechaE'
+		'id' => 'FechaE',
+		'required' => 'required'
 	);
 	$hora = array(
 		'Name' => 'Hora',
 		'type' => 'time', 
-		'id' => 'Hora'
+		'id' => 'Hora',
+		'required' => 'required'
 	);
 	$evidencia = array(
 		'name'	=> 'Evidencia', 
@@ -80,4 +84,32 @@
 		</article>
 	</section>
 </div>
+<div class="row">
+	<section>
+		<?
+		if($agenda->num_rows() > 0){
 
+			foreach($agenda->result() as $row){
+
+						echo "<article class='mitad margen'>";
+							echo "<table class='tablaAgenda'>";
+								echo "<tr><th>Fecha: </th><td>".$row->Fecha."</td></tr>";
+								echo "<tr><th>Hora: </th><td>".$row->Hora."</td></tr>";
+								echo "<tr><th>Evento: </th><td>".$row->Evento."</td></tr>";
+								echo "<tr><th>Lugar: </th><td>".$row->Lugar."</td></tr>";
+								if($row->Evidencia!='Sin evidencia'){
+
+									echo "<tr><td colspan='2'><center><a class='verDoc' target='_blank' href='".base_url()."includes/docs/".$row->Evidencia."'>Ver Doc</a></center></td></tr>";
+
+								}
+
+							echo "</table>";
+						echo "</article>";
+			}
+		}else{
+			echo "No hay eventos hoy";
+		}
+		?>
+		
+	</section>
+</div>

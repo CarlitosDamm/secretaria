@@ -31,6 +31,15 @@ class Consulta_model extends CI_Model {
         return $consulta;
     }
 
+    function verEven($hoy){
+        $condicion = array(
+            'Fecha =' => $hoy
+            );        
+        $this->db->order_by('IdAgenda', 'DESC');
+        $consulta = $this->db->get_where('ag_agenda', $condicion);
+        return $consulta;
+    }
+
     function buscarDocs($b){
         $condicion = array(
                 'Folio' => $b

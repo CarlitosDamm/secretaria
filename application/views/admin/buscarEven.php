@@ -34,7 +34,6 @@
 	</div>
 </div>
 <div class="row">
-	
 		<section>
 			<article><a class="botonBack" href="<?=base_url()?>index.php/Admin/agenda"> Regresar</a></article>
 		</section>
